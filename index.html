@@ -1601,37 +1601,38 @@
     lastScroll = cur;
   });
 
-  // ---- AUDIO NEWS PLAYER ---- 
+  // ---- AUDIO NEWS PLAYER (FIXED) ---- 
   const tracks = [
     { title: 'Тарантино снимает последний фильм «The Movie Critic»', author: 'Виктория Лебедева', duration: '6:00',
-      text: 'Квентин Тарантино снимает свой последний фильм — «The Movie Critic». Культовый режиссёр подтвердил, что десятый фильм станет финальным. Брэд Питт сыграет кинокритика из семидесятых, а Марго Робби — загадочную продюсершу. Съёмки стартовали в Лос-Анджелесе на прошлой неделе.' },
+      text: 'Квентин Тарантино снимает свой последний фильм Зе Муви Критик. Культовый режиссёр подтвердил, что десятый фильм станет финальным. Брэд Питт сыграет кинокритика из семидесятых, а Марго Робби загадочную продюсершу. Съёмки стартовали в Лос-Анджелесе на прошлой неделе.' },
     { title: '«Секретные войны» — рекорд $600 млн за выходные', author: 'Игорь Савельев', duration: '10:15',
-      text: 'Марвел «Секретные войны» собрал рекордные 600 миллионов долларов за первые выходные. Кроссовер стал самым кассовым открытием в истории кино. Джеймс Кэмерон показал 30 минут Аватара 3. Критики в шоке от подводных сцен. Новая технология Дип Кэпчер позволила снять актёров на реальной глубине 12 метров.' },
+      text: 'Марвел Секретные войны собрал рекордные 600 миллионов долларов за первые выходные. Кроссовер стал самым кассовым открытием в истории кино. Джеймс Кэмерон показал 30 минут Аватара 3. Критики в шоке от подводных сцен. Новая технология позволила снять актёров на реальной глубине 12 метров.' },
     { title: '«Оскар-2026»: Бергер — лучший режиссёр', author: 'Наталья Громова', duration: '7:40',
-      text: 'Студия А24 стала самой прибыльной студией года. Впервые независимая студия обошла мейджоров по рентабельности. Секрет успеха — ставка на авторское кино и точечный маркетинг. За год студия выпустила 12 фильмов, 8 из которых окупились в прокате.' },
+      text: 'Студия А24 стала самой прибыльной студией года. Впервые независимая студия обошла мейджоров по рентабельности. Секрет успеха это ставка на авторское кино и точечный маркетинг. За год студия выпустила 12 фильмов, 8 из которых окупились в прокате.' },
     { title: 'Netflix экранизирует Zelda — утечка со съёмок', author: 'Артём Зайцев', duration: '5:55',
       text: 'Хаяо Миядзаки работает над новым фильмом. Студия Гибли подтвердила слухи. 84-летний мастер вернулся из пенсии ради истории, которую он должен рассказать миру. Детали сюжета пока держатся в секрете, но известно что фильм будет связан с экологией и детством.' },
     { title: 'Sony Venice 3 — кинематограф переходит на 16K', author: 'Денис Кравцов', duration: '8:10',
-      text: 'Эппл ТВ плюс обогнал Дисней плюс по числу подписчиков. Стриминговые войны обостряются. Ставка на авторское кино и спорт принесла Эппл 190 миллионов подписчиков по всему миру. Компания инвестировала более 20 миллиардов в оригинальный контент.' },
+      text: 'Эпл ТВ плюс обогнал Дисней плюс по числу подписчиков. Стриминговые войны обостряются. Ставка на авторское кино и спорт принесла Эпл 190 миллионов подписчиков по всему миру. Компания инвестировала более 20 миллиардов в оригинальный контент.' },
     { title: 'Пон Джун-хо: новый триллер после «Паразитов»', author: 'Елена Пак', duration: '6:30',
       text: 'Сандэнс 2026. 19-летняя режиссёр из Грузии забрала главный приз за свой дебютный фильм. Тамар Квирикашвили стала самым молодым победителем в истории фестиваля. Фильм уже купила студия Сони за 15 миллионов долларов.' },
     { title: 'Рекорд Гладиатора 2 — 1.2 миллиарда', author: 'Редакция', duration: '5:30',
-      text: 'Гладиатор 2 собрал 1 точка 2 миллиарда долларов в мировом прокате. Ридли Скотт бьёт свой же рекорд. Фильм стал самым кассовым проектом режиссёра и доказал что историческое кино по-прежнему привлекает зрителей.' },
+      text: 'Гладиатор 2 собрал 1,2 миллиарда долларов в мировом прокате. Ридли Скотт бьёт свой же рекорд. Фильм стал самым кассовым проектом режиссёра и доказал что историческое кино по-прежнему привлекает зрителей.' },
     { title: 'Уорнер Бразерс отменила три проекта DC', author: 'Редакция', duration: '4:15',
-      text: 'Уорнер Бразерс отменила три проекта вселенной DC. Фанаты требуют объяснений. Студия сообщила о реструктуризации кинематографического подразделения и переносе фокуса на авторские проекты вместо супергеройских франшиз.' },
+      text: 'Уорнер Бразерс отменила три проекта вселенной ДиСи. Фанаты требуют объяснений. Студия сообщила о реструктуризации кинематографического подразделения и переносе фокуса на авторские проекты вместо супергеройских франшиз.' },
     { title: 'Тизер «10 000 кораблей» — 80 млн просмотров', author: 'Редакция', duration: '6:00',
-      text: 'Первый тизер сериала Игра престолов: 10 000 кораблей набрал 80 миллионов просмотров за первые сутки. Спин-офф расскажет историю принцессы Нимерии и её путешествия через Узкое море. Премьера запланирована на осень 2026 года.' },
+      text: 'Первый тизер сериала Игра престолов 10 000 кораблей набрал 80 миллионов просмотров за первые сутки. Спин-офф расскажет историю принцессы Нимерии и её путешествия через Узкое море. Премьера запланирована на осень 2026 года.' },
     { title: 'Док о «Властелине колец» — 4 часа закулисья', author: 'Редакция', duration: '7:20',
-      text: 'Вышел документальный фильм о создании Властелина колец — 4 часа закулисья от Питера Джексона. Режиссёр впервые показал неизданные кадры со съёмок и рассказал о сложностях, с которыми столкнулась команда при создании трилогии.' },
+      text: 'Вышел документальный фильм о создании Властелина колец. 4 часа закулисья от Питера Джексона. Режиссёр впервые показал неизданные кадры со съёмок и рассказал о сложностях, с которыми столкнулась команда при создании трилогии.' },
     { title: 'БАФТА 2026 — лидеры номинаций', author: 'Редакция', duration: '3:50',
-      text: 'Номинации БАФТА 2026: фильмы Конклав и Бруталист лидируют с 9 номинациями каждый. Церемония вручения состоится в марте в Лондоне. Эксперты прогнозируют острую борьбу между двумя фаворитами в главных категориях.' },
+      text: 'Номинации БАФТА 2026. Фильмы Конклав и Бруталист лидируют с 9 номинациями каждый. Церемония вручения состоится в марте в Лондоне. Эксперты прогнозируют острую борьбу между двумя фаворитами в главных категориях.' },
   ];
 
   let currentTrack = -1;
   let isPlaying = false;
   let progressInterval = null;
   let currentProgress = 0;
-  let speechUtterance = null;
+  let keepAliveTimer = null;
+  let ruVoice = null;
 
   function parseDuration(d) {
     const [m, s] = d.split(':').map(Number);
@@ -1644,103 +1645,134 @@
     return m + ':' + String(s).padStart(2, '0');
   }
 
-  // Get Russian voice
-  function getRuVoice() {
+  // FIX 1: Properly load and cache Russian voice
+  function loadVoices() {
     const voices = speechSynthesis.getVoices();
-    return voices.find(v => v.lang.startsWith('ru')) || voices[0];
+    if (voices.length > 0) {
+      ruVoice = voices.find(v => v.lang === 'ru-RU')
+             || voices.find(v => v.lang.startsWith('ru'))
+             || voices[0];
+      console.log('TTS voice loaded:', ruVoice ? ruVoice.name : 'none');
+    }
   }
-  // Preload voices
+  loadVoices();
   if (speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = () => {};
+    speechSynthesis.onvoiceschanged = loadVoices;
   }
 
-  function playTrack(idx) {
-    const bar = document.getElementById('audioBar');
-    const titleEl = document.getElementById('abTitle');
-    const authorEl = document.getElementById('abAuthor');
-    const durEl = document.getElementById('abTimeDur');
-    const fill = document.getElementById('abFill');
-    const curEl = document.getElementById('abTimeCur');
-    const eqEl = document.getElementById('abEq');
+  // FIX 2: Chrome keep-alive — prevents speech from freezing after 15s
+  function startKeepAlive() {
+    stopKeepAlive();
+    keepAliveTimer = setInterval(function() {
+      if (speechSynthesis.speaking && !speechSynthesis.paused) {
+        speechSynthesis.pause();
+        speechSynthesis.resume();
+      }
+    }, 5000);
+  }
 
-    // Stop previous
-    clearAllPlayingStates();
+  function stopKeepAlive() {
+    if (keepAliveTimer) {
+      clearInterval(keepAliveTimer);
+      keepAliveTimer = null;
+    }
+  }
+
+  function stopSpeech() {
+    stopKeepAlive();
+    if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
+    speechSynthesis.cancel();
+  }
+
+  function updatePlayUI(playing) {
+    var eqEl = document.getElementById('abEq');
+    var playBtn = document.getElementById('abPlay');
+    if (playing) {
+      playBtn.classList.add('is-playing');
+      document.getElementById('abPlayIcon').innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+      eqEl.style.display = 'flex';
+    } else {
+      playBtn.classList.remove('is-playing');
+      document.getElementById('abPlayIcon').innerHTML = '<polygon points="8,5 19,12 8,19"/>';
+      eqEl.style.display = 'none';
+    }
+  }
+
+  // FIX 3: Single clean flow — no double stopSpeech
+  function playTrack(idx) {
+    // Stop everything first
     stopSpeech();
+    clearAllPlayingStates();
 
     if (currentTrack === idx && isPlaying) {
-      togglePlay();
+      isPlaying = false;
+      updatePlayUI(false);
+      currentTrack = -1;
       return;
     }
 
     currentTrack = idx;
     currentProgress = 0;
-    const t = tracks[idx];
+    var t = tracks[idx];
 
-    titleEl.textContent = t.title;
-    authorEl.textContent = t.author;
-    durEl.textContent = t.duration;
-    curEl.textContent = '0:00';
-    fill.style.width = '0%';
+    document.getElementById('abTitle').textContent = t.title;
+    document.getElementById('abAuthor').textContent = t.author;
+    document.getElementById('abTimeDur').textContent = t.duration;
+    document.getElementById('abTimeCur').textContent = '0:00';
+    document.getElementById('abFill').style.width = '0%';
+    document.getElementById('audioBar').classList.add('visible');
 
-    bar.classList.add('visible');
-    startPlaying();
-    setPlayingState(idx, true);
-  }
+    // Ensure voices loaded
+    if (!ruVoice) loadVoices();
 
-  function stopSpeech() {
-    if (speechSynthesis.speaking || speechSynthesis.pending) {
-      speechSynthesis.cancel();
-    }
-    speechUtterance = null;
-  }
+    // Create utterance
+    var utterance = new SpeechSynthesisUtterance(t.text);
+    utterance.lang = 'ru-RU';
+    utterance.rate = 1.05;
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
+    if (ruVoice) utterance.voice = ruVoice;
 
-  function startPlaying() {
-    isPlaying = true;
-    const playBtn = document.getElementById('abPlay');
-    const eqEl = document.getElementById('abEq');
-    playBtn.classList.add('is-playing');
-    document.getElementById('abPlayIcon').innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
-    eqEl.style.display = 'flex';
+    var startTime = Date.now();
+    var estDuration = t.text.length / 11;
 
-    if (progressInterval) clearInterval(progressInterval);
-
-    // Real TTS Speech
-    const t = tracks[currentTrack];
-    stopSpeech();
-    speechUtterance = new SpeechSynthesisUtterance(t.text);
-    speechUtterance.lang = 'ru-RU';
-    speechUtterance.rate = 1.0;
-    speechUtterance.pitch = 1.0;
-    const ruVoice = getRuVoice();
-    if (ruVoice) speechUtterance.voice = ruVoice;
-
-    // Track real duration from speech
-    let startTime = Date.now();
-
-    speechUtterance.onend = () => {
-      clearInterval(progressInterval);
-      isPlaying = false;
-      document.getElementById('abPlayIcon').innerHTML = '<polygon points="8,5 19,12 8,19"/>';
-      document.getElementById('abPlay').classList.remove('is-playing');
-      document.getElementById('abEq').style.display = 'none';
-      document.getElementById('abFill').style.width = '100%';
-      clearAllPlayingStates();
+    utterance.onstart = function() {
+      console.log('TTS started: ' + t.title);
     };
 
-    speechUtterance.onerror = (e) => {
-      if (e.error !== 'canceled') {
-        console.warn('TTS error:', e.error);
+    utterance.onend = function() {
+      stopKeepAlive();
+      if (progressInterval) clearInterval(progressInterval);
+      isPlaying = false;
+      updatePlayUI(false);
+      document.getElementById('abFill').style.width = '100%';
+      clearAllPlayingStates();
+      console.log('TTS ended');
+    };
+
+    utterance.onerror = function(e) {
+      console.warn('TTS error:', e.error);
+      if (e.error !== 'canceled' && e.error !== 'interrupted') {
+        stopKeepAlive();
+        if (progressInterval) clearInterval(progressInterval);
+        isPlaying = false;
+        updatePlayUI(false);
+        clearAllPlayingStates();
       }
     };
 
-    speechSynthesis.speak(speechUtterance);
+    // Start speaking
+    isPlaying = true;
+    updatePlayUI(true);
+    setPlayingState(idx, true);
+    speechSynthesis.speak(utterance);
+    startKeepAlive();
 
-    // Progress bar based on estimated duration
-    const estDuration = t.text.length / 12; // ~12 chars per second for Russian
-    progressInterval = setInterval(() => {
+    // Progress bar
+    progressInterval = setInterval(function() {
       if (!isPlaying) return;
       currentProgress = (Date.now() - startTime) / 1000;
-      const pct = Math.min((currentProgress / estDuration) * 100, 99);
+      var pct = Math.min((currentProgress / estDuration) * 100, 99);
       document.getElementById('abFill').style.width = pct + '%';
       document.getElementById('abTimeCur').textContent = formatTime(currentProgress);
     }, 250);
@@ -1748,28 +1780,26 @@
 
   function togglePlay() {
     if (currentTrack < 0) return;
-    const eqEl = document.getElementById('abEq');
     if (isPlaying) {
       isPlaying = false;
-      clearInterval(progressInterval);
       speechSynthesis.pause();
-      document.getElementById('abPlayIcon').innerHTML = '<polygon points="8,5 19,12 8,19"/>';
-      document.getElementById('abPlay').classList.remove('is-playing');
-      eqEl.style.display = 'none';
+      stopKeepAlive();
+      if (progressInterval) clearInterval(progressInterval);
+      updatePlayUI(false);
       clearAllPlayingStates();
     } else {
       isPlaying = true;
       speechSynthesis.resume();
-      document.getElementById('abPlayIcon').innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
-      document.getElementById('abPlay').classList.add('is-playing');
-      eqEl.style.display = 'flex';
+      startKeepAlive();
+      updatePlayUI(true);
       setPlayingState(currentTrack, true);
-      // Resume progress
-      const estDuration = tracks[currentTrack].text.length / 12;
-      progressInterval = setInterval(() => {
+      var t = tracks[currentTrack];
+      var estDuration = t.text.length / 11;
+      var resumeStart = Date.now() - (currentProgress * 1000);
+      progressInterval = setInterval(function() {
         if (!isPlaying) return;
-        currentProgress += 0.25;
-        const pct = Math.min((currentProgress / estDuration) * 100, 99);
+        currentProgress = (Date.now() - resumeStart) / 1000;
+        var pct = Math.min((currentProgress / estDuration) * 100, 99);
         document.getElementById('abFill').style.width = pct + '%';
         document.getElementById('abTimeCur').textContent = formatTime(currentProgress);
       }, 250);
@@ -1778,51 +1808,48 @@
 
   function seekAudio(e) {
     if (currentTrack < 0) return;
-    const bar = e.currentTarget;
-    const rect = bar.getBoundingClientRect();
-    const pct = (e.clientX - rect.left) / rect.width;
-    const totalSec = parseDuration(tracks[currentTrack].duration);
+    var rect = e.currentTarget.getBoundingClientRect();
+    var pct = (e.clientX - rect.left) / rect.width;
+    var totalSec = parseDuration(tracks[currentTrack].duration);
     currentProgress = Math.floor(pct * totalSec);
     document.getElementById('abFill').style.width = (pct * 100) + '%';
     document.getElementById('abTimeCur').textContent = formatTime(currentProgress);
   }
 
   function closePlayer() {
-    const bar = document.getElementById('audioBar');
-    bar.classList.remove('visible');
-    clearInterval(progressInterval);
     stopSpeech();
+    document.getElementById('audioBar').classList.remove('visible');
     isPlaying = false;
     currentTrack = -1;
     clearAllPlayingStates();
   }
 
   function clearAllPlayingStates() {
-    document.querySelectorAll('.card-play-btn.playing').forEach(b => {
+    document.querySelectorAll('.card-play-btn.playing').forEach(function(b) {
       b.classList.remove('playing');
       b.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>';
     });
-    document.querySelectorAll('.trending-play.playing').forEach(b => {
+    document.querySelectorAll('.trending-play.playing').forEach(function(b) {
       b.classList.remove('playing');
       b.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>';
     });
   }
 
   function setPlayingState(idx, playing) {
-    const cardBtns = document.querySelectorAll('.card-play-btn');
-    const trendBtns = document.querySelectorAll('.trending-play');
+    var cardBtns = document.querySelectorAll('.card-play-btn');
+    var trendBtns = document.querySelectorAll('.trending-play');
     if (idx >= 1 && idx <= 5 && cardBtns[idx - 1]) {
-      const btn = cardBtns[idx - 1];
+      var btn = cardBtns[idx - 1];
       if (playing) {
         btn.classList.add('playing');
         btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" fill="white"/><rect x="14" y="4" width="4" height="16" fill="white"/></svg>';
       }
     }
     if (idx >= 6 && idx <= 10 && trendBtns[idx - 6]) {
-      const btn = trendBtns[idx - 6];
+      var btn2 = trendBtns[idx - 6];
       if (playing) {
-        btn.classList.add('playing');
-        btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" fill="white"/><rect x="14" y="4" width="4" height="16" fill="white"/></svg>';
+        btn2.classList.add('playing');
+        btn2.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" fill="white"/><rect x="14" y="4" width="4" height="16" fill="white"/></svg>';
       }
     }
   }
