@@ -1603,23 +1603,35 @@
 
   // ---- AUDIO NEWS PLAYER ---- 
   const tracks = [
-    { title: 'Тарантино снимает последний фильм «The Movie Critic»', author: 'Виктория Лебедева', duration: '6:00' },
-    { title: '«Секретные войны» — рекорд $600 млн за выходные', author: 'Игорь Савельев', duration: '10:15' },
-    { title: '«Оскар-2026»: Бергер — лучший режиссёр', author: 'Наталья Громова', duration: '7:40' },
-    { title: 'Netflix экранизирует Zelda — утечка со съёмок', author: 'Артём Зайцев', duration: '5:55' },
-    { title: 'Sony Venice 3 — кинематограф переходит на 16K', author: 'Денис Кравцов', duration: '8:10' },
-    { title: 'Пон Джун-хо: новый триллер после «Паразитов»', author: 'Елена Пак', duration: '6:30' },
-    { title: 'Warner Bros. уволила главу студии', author: 'Редакция', duration: '5:30' },
-    { title: 'Спилберг и ремейк «Назад в будущее»?', author: 'Редакция', duration: '4:15' },
-    { title: 'Финал «Игры в кальмара» — рекорд Netflix', author: 'Редакция', duration: '6:00' },
-    { title: '«Голливуд без масок» — волна судебных исков', author: 'Редакция', duration: '7:20' },
-    { title: 'Зендея утверждена на роль Клеопатры', author: 'Редакция', duration: '3:50' },
+    { title: 'Тарантино снимает последний фильм «The Movie Critic»', author: 'Виктория Лебедева', duration: '6:00',
+      text: 'Квентин Тарантино снимает свой последний фильм — «The Movie Critic». Культовый режиссёр подтвердил, что десятый фильм станет финальным. Брэд Питт сыграет кинокритика из семидесятых, а Марго Робби — загадочную продюсершу. Съёмки стартовали в Лос-Анджелесе на прошлой неделе.' },
+    { title: '«Секретные войны» — рекорд $600 млн за выходные', author: 'Игорь Савельев', duration: '10:15',
+      text: 'Марвел «Секретные войны» собрал рекордные 600 миллионов долларов за первые выходные. Кроссовер стал самым кассовым открытием в истории кино. Джеймс Кэмерон показал 30 минут Аватара 3. Критики в шоке от подводных сцен. Новая технология Дип Кэпчер позволила снять актёров на реальной глубине 12 метров.' },
+    { title: '«Оскар-2026»: Бергер — лучший режиссёр', author: 'Наталья Громова', duration: '7:40',
+      text: 'Студия А24 стала самой прибыльной студией года. Впервые независимая студия обошла мейджоров по рентабельности. Секрет успеха — ставка на авторское кино и точечный маркетинг. За год студия выпустила 12 фильмов, 8 из которых окупились в прокате.' },
+    { title: 'Netflix экранизирует Zelda — утечка со съёмок', author: 'Артём Зайцев', duration: '5:55',
+      text: 'Хаяо Миядзаки работает над новым фильмом. Студия Гибли подтвердила слухи. 84-летний мастер вернулся из пенсии ради истории, которую он должен рассказать миру. Детали сюжета пока держатся в секрете, но известно что фильм будет связан с экологией и детством.' },
+    { title: 'Sony Venice 3 — кинематограф переходит на 16K', author: 'Денис Кравцов', duration: '8:10',
+      text: 'Эппл ТВ плюс обогнал Дисней плюс по числу подписчиков. Стриминговые войны обостряются. Ставка на авторское кино и спорт принесла Эппл 190 миллионов подписчиков по всему миру. Компания инвестировала более 20 миллиардов в оригинальный контент.' },
+    { title: 'Пон Джун-хо: новый триллер после «Паразитов»', author: 'Елена Пак', duration: '6:30',
+      text: 'Сандэнс 2026. 19-летняя режиссёр из Грузии забрала главный приз за свой дебютный фильм. Тамар Квирикашвили стала самым молодым победителем в истории фестиваля. Фильм уже купила студия Сони за 15 миллионов долларов.' },
+    { title: 'Рекорд Гладиатора 2 — 1.2 миллиарда', author: 'Редакция', duration: '5:30',
+      text: 'Гладиатор 2 собрал 1 точка 2 миллиарда долларов в мировом прокате. Ридли Скотт бьёт свой же рекорд. Фильм стал самым кассовым проектом режиссёра и доказал что историческое кино по-прежнему привлекает зрителей.' },
+    { title: 'Уорнер Бразерс отменила три проекта DC', author: 'Редакция', duration: '4:15',
+      text: 'Уорнер Бразерс отменила три проекта вселенной DC. Фанаты требуют объяснений. Студия сообщила о реструктуризации кинематографического подразделения и переносе фокуса на авторские проекты вместо супергеройских франшиз.' },
+    { title: 'Тизер «10 000 кораблей» — 80 млн просмотров', author: 'Редакция', duration: '6:00',
+      text: 'Первый тизер сериала Игра престолов: 10 000 кораблей набрал 80 миллионов просмотров за первые сутки. Спин-офф расскажет историю принцессы Нимерии и её путешествия через Узкое море. Премьера запланирована на осень 2026 года.' },
+    { title: 'Док о «Властелине колец» — 4 часа закулисья', author: 'Редакция', duration: '7:20',
+      text: 'Вышел документальный фильм о создании Властелина колец — 4 часа закулисья от Питера Джексона. Режиссёр впервые показал неизданные кадры со съёмок и рассказал о сложностях, с которыми столкнулась команда при создании трилогии.' },
+    { title: 'БАФТА 2026 — лидеры номинаций', author: 'Редакция', duration: '3:50',
+      text: 'Номинации БАФТА 2026: фильмы Конклав и Бруталист лидируют с 9 номинациями каждый. Церемония вручения состоится в марте в Лондоне. Эксперты прогнозируют острую борьбу между двумя фаворитами в главных категориях.' },
   ];
 
   let currentTrack = -1;
   let isPlaying = false;
   let progressInterval = null;
   let currentProgress = 0;
+  let speechUtterance = null;
 
   function parseDuration(d) {
     const [m, s] = d.split(':').map(Number);
@@ -1632,6 +1644,16 @@
     return m + ':' + String(s).padStart(2, '0');
   }
 
+  // Get Russian voice
+  function getRuVoice() {
+    const voices = speechSynthesis.getVoices();
+    return voices.find(v => v.lang.startsWith('ru')) || voices[0];
+  }
+  // Preload voices
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = () => {};
+  }
+
   function playTrack(idx) {
     const bar = document.getElementById('audioBar');
     const titleEl = document.getElementById('abTitle');
@@ -1640,10 +1662,10 @@
     const fill = document.getElementById('abFill');
     const curEl = document.getElementById('abTimeCur');
     const eqEl = document.getElementById('abEq');
-    const playBtn = document.getElementById('abPlay');
 
-    // Clear old state
+    // Stop previous
     clearAllPlayingStates();
+    stopSpeech();
 
     if (currentTrack === idx && isPlaying) {
       togglePlay();
@@ -1665,6 +1687,13 @@
     setPlayingState(idx, true);
   }
 
+  function stopSpeech() {
+    if (speechSynthesis.speaking || speechSynthesis.pending) {
+      speechSynthesis.cancel();
+    }
+    speechUtterance = null;
+  }
+
   function startPlaying() {
     isPlaying = true;
     const playBtn = document.getElementById('abPlay');
@@ -1674,22 +1703,47 @@
     eqEl.style.display = 'flex';
 
     if (progressInterval) clearInterval(progressInterval);
-    const totalSec = parseDuration(tracks[currentTrack].duration);
-    progressInterval = setInterval(() => {
-      currentProgress += 1;
-      if (currentProgress >= totalSec) {
-        currentProgress = totalSec;
-        clearInterval(progressInterval);
-        isPlaying = false;
-        document.getElementById('abPlayIcon').innerHTML = '<polygon points="8,5 19,12 8,19"/>';
-        document.getElementById('abPlay').classList.remove('is-playing');
-        eqEl.style.display = 'none';
-        clearAllPlayingStates();
+
+    // Real TTS Speech
+    const t = tracks[currentTrack];
+    stopSpeech();
+    speechUtterance = new SpeechSynthesisUtterance(t.text);
+    speechUtterance.lang = 'ru-RU';
+    speechUtterance.rate = 1.0;
+    speechUtterance.pitch = 1.0;
+    const ruVoice = getRuVoice();
+    if (ruVoice) speechUtterance.voice = ruVoice;
+
+    // Track real duration from speech
+    let startTime = Date.now();
+
+    speechUtterance.onend = () => {
+      clearInterval(progressInterval);
+      isPlaying = false;
+      document.getElementById('abPlayIcon').innerHTML = '<polygon points="8,5 19,12 8,19"/>';
+      document.getElementById('abPlay').classList.remove('is-playing');
+      document.getElementById('abEq').style.display = 'none';
+      document.getElementById('abFill').style.width = '100%';
+      clearAllPlayingStates();
+    };
+
+    speechUtterance.onerror = (e) => {
+      if (e.error !== 'canceled') {
+        console.warn('TTS error:', e.error);
       }
-      const pct = (currentProgress / totalSec) * 100;
+    };
+
+    speechSynthesis.speak(speechUtterance);
+
+    // Progress bar based on estimated duration
+    const estDuration = t.text.length / 12; // ~12 chars per second for Russian
+    progressInterval = setInterval(() => {
+      if (!isPlaying) return;
+      currentProgress = (Date.now() - startTime) / 1000;
+      const pct = Math.min((currentProgress / estDuration) * 100, 99);
       document.getElementById('abFill').style.width = pct + '%';
       document.getElementById('abTimeCur').textContent = formatTime(currentProgress);
-    }, 1000);
+    }, 250);
   }
 
   function togglePlay() {
@@ -1698,14 +1752,27 @@
     if (isPlaying) {
       isPlaying = false;
       clearInterval(progressInterval);
+      speechSynthesis.pause();
       document.getElementById('abPlayIcon').innerHTML = '<polygon points="8,5 19,12 8,19"/>';
       document.getElementById('abPlay').classList.remove('is-playing');
       eqEl.style.display = 'none';
       clearAllPlayingStates();
     } else {
       isPlaying = true;
-      startPlaying();
+      speechSynthesis.resume();
+      document.getElementById('abPlayIcon').innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+      document.getElementById('abPlay').classList.add('is-playing');
+      eqEl.style.display = 'flex';
       setPlayingState(currentTrack, true);
+      // Resume progress
+      const estDuration = tracks[currentTrack].text.length / 12;
+      progressInterval = setInterval(() => {
+        if (!isPlaying) return;
+        currentProgress += 0.25;
+        const pct = Math.min((currentProgress / estDuration) * 100, 99);
+        document.getElementById('abFill').style.width = pct + '%';
+        document.getElementById('abTimeCur').textContent = formatTime(currentProgress);
+      }, 250);
     }
   }
 
@@ -1724,6 +1791,7 @@
     const bar = document.getElementById('audioBar');
     bar.classList.remove('visible');
     clearInterval(progressInterval);
+    stopSpeech();
     isPlaying = false;
     currentTrack = -1;
     clearAllPlayingStates();
@@ -1741,7 +1809,6 @@
   }
 
   function setPlayingState(idx, playing) {
-    // Cards use tracks 1-5, trending uses 6-10
     const cardBtns = document.querySelectorAll('.card-play-btn');
     const trendBtns = document.querySelectorAll('.trending-play');
     if (idx >= 1 && idx <= 5 && cardBtns[idx - 1]) {
